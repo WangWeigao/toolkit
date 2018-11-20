@@ -25,7 +25,7 @@ SECRET_KEY = 'h$!j!0+&em0p1+&o+7hwq)5=2ha85^w^7+de5t!qokve9*^pyb'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['toolkit.vigo.host']
+ALLOWED_HOSTS = ['toolkit.vigo.host', 'localhost', '127.0.0.1']
 
 
 # Application definition

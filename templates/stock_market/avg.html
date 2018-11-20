@@ -1,9 +1,36 @@
 {% extends "base.html" %}
 {% block content %}
-<table>
-{% for index, row in all_data.iterrows %}
+<table class='table table-hover'>
+	<tr>
+		<th>code</th>
+		<th>name</th>
+		<th>change</th>
+		<th>open</th>
+		<th>preclose</th>
+		<th>close</th>
+		<th>high</th>
+		<th>low</th>
+		<th>volume</th>
+		<th>amount</th>
+		<th>dtype</th>
+	</tr>
+{% for index, row in all_data %}
 <tr>
+	<td>{{ row.code }}</td>
 	<td>{{ row.name }}</td>
+	{% if row.change < 0 %}
+	<td class='alert-danger'>{{ row.change }}</td>
+	{% else %}
+	<td>{{ row.change }}</td>
+	{% endif %}
+	<td>{{ row.open }}</td>
+	<td>{{ row.preclose }}</td>
+	<td>{{ row.close }}</td>
+	<td>{{ row.high }}</td>
+	<td>{{ row.low }}</td>
+	<td>{{ row.volume }}</td>
+	<td>{{ row.amount }}</td>
+	<td>{{ row.dtype }}</td>
 </tr>
 {% endfor %}
 </table>
