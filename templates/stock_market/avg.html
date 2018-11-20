@@ -3,7 +3,11 @@
 <table>
 {% for index, row in all_data.iterrows %}
 <tr>
+<<<<<<< HEAD
 	<td>{{ row.name }}</td>
+=======
+	<td>{{ row.get(name) }}</td>
+>>>>>>> 64e8c1f6ce95c2c28a15a3a1da8f85b15dc91f91
 </tr>
 {% endfor %}
 </table>
